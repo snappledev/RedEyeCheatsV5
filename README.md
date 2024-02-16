@@ -5,7 +5,7 @@ With the release of CS2 and my departure from cheating, I have decided to releas
 This project is OUTDATED and WILL NOT RUN. 
 ## Screenshots
 ![alt text](https://github.com/snappledev/RedEyeCheatsV5/blob/main/Screenshot_28.png?raw=true)
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/XwO5qdFG6VI/0.jpg)](https://www.youtube.com/watch?v=XwO5qdFG6VI)
 ## Features
 
 Very nice menu hand made, lots of features
