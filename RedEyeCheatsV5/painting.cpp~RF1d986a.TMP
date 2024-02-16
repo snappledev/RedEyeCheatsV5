@@ -1,0 +1,247 @@
+#include "painting.h"
+#include "interfaces.h"
+Paint* paint;
+#define PI 3.1415
+#define radianstodegrees(x) ((x*180)/PI)
+#define degreestoradians(x) ((x*PI)/180)
+enum fontFlags
+{
+	FONTFLAG_NONE,
+	FONTFLAG_ITALIC = 0x001,
+	FONTFLAG_UNDERLINE = 0x002,
+	FONTFLAG_STRIKEOUT = 0x004,
+	FONTFLAG_SYMBOL = 0x008,
+	FONTFLAG_ANTIALIAS = 0x010,
+	FONTFLAG_GAUSSIANBLUR = 0x020,
+	FONTFLAG_ROTARY = 0x040,
+	FONTFLAG_DROPSHADOW = 0x080,
+	FONTFLAG_ADDITIVE = 0x100,
+	FONTFLAG_OUTLINE = 0x200,
+	FONTFLAG_CUSTOM = 0x400,
+	FONTFLAG_BITMAP = 0x800,
+};
+
+void Paint::setupFonts() {
+	const auto createGlyph = [&](DWORD* glyph, const char* font, int tall, int weight, int blur, int scanlines, int flags) -> void
+	{
+		*glyph = interfaceManager::isurface->FontCreate();
+		interfaceManager::isurface->SetFontGlyphSet(*glyph, font, tall, weight, blur, scanlines, flags);
+	};
+	createGlyph(&Glyphs::Tahoma_12, "Tahoma", 12, 600, 0, 0, FONTFLAG_ANTIALIAS);
+	createGlyph(&Glyphs::ESP, "Tahoma", 12, 600, 0, 0, FONTFLAG_OUTLINE);
+	bGlyphsCreated = true;
+}
+void Paint::outline(int x, int y, int w, int h, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	interfaceManager::isurface->DrawSetColor(color);
+	interfaceManager::isurface->DrawOutlinedRect(x, y, x + w, y + h);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+}
+void Paint::rectangle(int x, int y, int w, int h, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	interfaceManager::isurface->DrawSetColor(color);
+	interfaceManager::isurface->DrawFilledRect(x, y, x + w, y + h);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+	
+}
+void Paint::scalineTriangle(int x, int y, int x2, int y2, int x3, int y3, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	static int texture = interfaceManager::isurface->CreateNewTextureID(true);
+	unsigned char texture_buffer[4] = { 255, 255, 255, 255 };
+	interfaceManager::isurface->DrawSetTextureRGBA(texture, texture_buffer, 1, 1);
+	interfaceManager::isurface->DrawSetColor(color);
+	interfaceManager::isurface->DrawSetTexture(texture);
+	Vertex_t vert[3]; vert[0].m_Position.x = x; vert[0].m_Position.y = y; vert[1].m_Position.x = x2; vert[1].m_Position.y = y2; vert[2].m_Position.x = x3; vert[2].m_Position.y = y3;
+	interfaceManager::isurface->DrawTexturedPolygon(3, vert);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+
+
+	
+}
+void Paint::scalineTriangleOutline(int x, int y, int x2, int y2, int x3, int y3, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	interfaceManager::isurface->DrawSetColor(color);
+	int xArray[3]; xArray[0] = x; xArray[1] = x2; xArray[2] = x3;
+	int yArray[3]; yArray[0] = y; yArray[1] = y2; yArray[2] = y3;
+	interfaceManager::isurface->DrawPolyLine(xArray, yArray, 3);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+
+}
+void Paint::circle(int x, int y, int r, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	static int texture = interfaceManager::isurface->CreateNewTextureID(true);
+	unsigned char texture_buffer[4] = { 255, 255, 255, 255 };
+	interfaceManager::isurface->DrawSetTextureRGBA(texture, texture_buffer, 1, 1);
+	interfaceManager::isurface->DrawSetColor(color);
+	interfaceManager::isurface->DrawSetTexture(texture);
+	const int segments = 30;
+	Vertex_t vert[segments];
+	for (int i = 0; i < segments; i++) {
+		float angle = degreestoradians(i * (360 / segments));
+		vert[i].m_Position.x = cos(angle) * r + x;
+		vert[i].m_Position.y = sin(angle) * r + y;
+	}
+	interfaceManager::isurface->DrawTexturedPolygon(segments, vert);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+}
+void Paint::line(int x, int y, int x2, int y2, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	interfaceManager::isurface->DrawSetColor(color);
+	interfaceManager::isurface->DrawLine(x, y, x2, y2);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+}
+void Paint::circleOutline(int x, int y, int r, color color, RECT clipArea) {
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+	interfaceManager::isurface->DrawSetColor(color);
+	interfaceManager::isurface->DrawOutlinedCircle(x, y, r, 10 + r);
+
+	if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+		endClip();
+}
+void Paint::corner(int x, int y, int w, int h, color colo, bool outline, RECT clipArea)
+{
+	if (outline) {
+		rectangle(x - 1, y - 1, (w / 5) + 3, 3, color(255, 0, 0, 0), clipArea); //LEFT LEFTSIDE
+		rectangle(x - 1, y - 1, 3, (w / 5) + 3, color(255, 0, 0, 0), clipArea); //LEFT LEFTSIDE
+	}
+
+	line(x, y, x + (w / 5), y, colo, clipArea); //LEFT TOP
+	line(x, y, x, y + (w / 5), colo, clipArea); //LEFT LEFTSIDE		
+	if (outline) {
+		rectangle(x + w - 1, y, 3, (w / 5) + 2, color(255, 0, 0, 0), clipArea); //LEFT LEFTSIDE
+		rectangle(x + w - (w / 5) - 1, y - 1, (w / 5) + 3, 3, color(255, 0, 0, 0), clipArea); //LEFT TOP
+	}
+	line(x + w, y, x + w, y + (w / 5), colo, clipArea); //LEFT LEFTSIDE
+	line(x + w, y, x + w - (w / 5), y, colo, clipArea); //LEFT TOP																																	//BOTTOM LEFT
+	if (outline) {
+		rectangle(x - 1, (y + h) - 1, (w / 5) + 3, 3, color(255, 0, 0, 0), clipArea); //LEFT TOP
+		rectangle(x - 1, (y + (h)) - (w / 5) - 1, 3, (w / 5) + 2, color(255, 0, 0, 0), clipArea); //LEFT TOP
+	}
+	line(x, y + h, x + (w / 5), y + h, colo, clipArea); //BOTTOM LEFT
+	line(x, y + h, x, (y + h) - (w / 5), colo, clipArea); //BOTTOM LEFT																																			  //BOTTOM RIGHT
+	if (outline) {
+		rectangle(x + w - 1, ((y + h) - (w / 5)) - 1, 3, (w / 5) + 3, color(255, 0, 0, 0), clipArea); //VERTICLE BIT
+		rectangle(x + w - (w / 5) - 1, y + h - 1, (w / 5) + 2, 3, color(255, 0, 0, 0), clipArea); //BOTTOM BIT
+	}
+	line(x + w, y + h, x + w, (y + h) - (w / 5), colo, clipArea); //LEFT TOP
+	line(x + w, y + h, (x + w) - (w / 5), y + h, colo, clipArea); //LEFT TOP
+}
+void Paint::threeLine(int x, int y, int x1, int y1, int x2, int y2, int x3, int y3, color col, RECT clipArea) {
+	line(x, y, x1, y1, col, clipArea);
+	line(x1, y1, x2, y2, col, clipArea);
+	line(x2, y2, x3, y3, col, clipArea);
+}
+void Paint::octagonBox(int x, int y, int w, int h, color col, RECT clipArea)
+{
+	int SideHeight = h / 6;
+	int AddHeight = SideHeight / 2;
+	threeLine(x, y + SideHeight + AddHeight, x, y + SideHeight, x + SideHeight, y, x + SideHeight + AddHeight, y, col, clipArea); //topleft
+	threeLine(x + w - SideHeight - AddHeight, y, x + w - SideHeight, y, x + w, y + SideHeight, x + w, y + SideHeight + AddHeight, col, clipArea);//Top right
+	threeLine(x, y + h - SideHeight - AddHeight, x, y + h - SideHeight, x + SideHeight, y + h, x + SideHeight + AddHeight, y + h, col, clipArea); //Bottom left
+	threeLine(x + w, y + h - SideHeight - AddHeight, x + w, y + h - SideHeight, x + w - SideHeight, y + h, x + w - SideHeight - AddHeight, y + h, col, clipArea); // bottom right
+}
+RECT Paint::textSize(const char* data, unsigned long glyph) {
+	int wide, tall;
+	va_list va_alist; char buffer[1024] = { '\0' }; wchar_t string[1024] = { '\0' };
+	va_start(va_alist, data);
+	vsprintf_s(buffer, data, va_alist);
+	va_end(va_alist);
+	wsprintfW(string, L"%S", buffer);
+	interfaceManager::isurface->GetTextSize(glyph, string, wide, tall);
+	return RECT{ 0,0,wide,tall };
+}
+void Paint::text(int x, int y, const char* data, DWORD glyph,textPositioningStruct pos, color color, RECT clipArea) {
+	
+
+	if (!bGlyphsCreated)
+		setupFonts();
+	if (glyph) {
+
+		if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+			startClip(clipArea.left, clipArea.top, clipArea.right, clipArea.bottom);
+
+		va_list va_alist; char buffer[1024] = { '\0' }; wchar_t string[1024] = { '\0' };
+		va_start(va_alist, data);
+		vsprintf_s(buffer, data, va_alist);
+		va_end(va_alist);
+		wsprintfW(string, L"%S", buffer);
+		int wide, tall;
+		interfaceManager::isurface->GetTextSize(glyph, string, wide, tall);
+		int newX = x; int newY = y;
+		switch (pos) {
+		case textPositioningStruct::bottomCenter:
+			newX = x - (wide / 2);
+			newY = y - tall;
+		case textPositioningStruct::bottomLeft:
+			newY = y - tall;
+		case textPositioningStruct::bottomRight:
+			newX = x - wide; 
+			newY = y - tall;
+		case textPositioningStruct::center:
+			newX = x - (wide / 2); 
+			newY = y - (tall / 2);
+		case textPositioningStruct::leftCenter:
+			newY = y - (tall / 2);
+		case textPositioningStruct::rightCenter:
+			newX = x - wide; newY = y - (tall / 2);
+		case textPositioningStruct::topCenter:
+			newX = x - (wide / 2);
+		case textPositioningStruct::topRight:
+			newX = x - wide;
+		}
+		interfaceManager::isurface->DrawSetTextPos(newX, newY);
+		interfaceManager::isurface->DrawSetTextFont(glyph);
+		interfaceManager::isurface->DrawSetTextColor(color.r(), color.g(), color.b(), color.a());
+		interfaceManager::isurface->DrawPrintText(string, wcslen(string));
+
+		if (!(clipArea.left == 0 && clipArea.right == 0 && clipArea.top == 0 && clipArea.bottom == 0))
+			endClip();
+	}
+}
+void Paint::startClip(int x_, int y_, int w_, int h_) {
+	bCustomClip = true;
+
+	interfaceManager::isurface->PopMakeCurrent(panelID);
+	interfaceManager::isurface->PushMakeCurrent(panelID, false);
+	x = x_; y = y_; x1 = x_ + w_; y1 = y_ + h_;
+	int tmX = 0, tmY = 0, tmW = 0, tmH = 0;
+	interfaceManager::ipanel->GetClipRect(panelID, tmX, tmY, tmW, tmH);
+}
+void Paint::endClip() {
+	bCustomClip = false;
+	interfaceManager::isurface->PopMakeCurrent(panelID);
+	interfaceManager::isurface->PushMakeCurrent(panelID, false);
+	x = 0; y = 0; x1 = Game::m_iWidth; y1 = Game::m_iHeight;
+	int tmX = 0, tmY = 0, tmW = 0, tmH = 0;
+	interfaceManager::ipanel->GetClipRect(panelID, tmX, tmY, tmW, tmH);
+}
+namespace Glyphs {
+	DWORD Tahoma_12;
+	DWORD ESP;
+}

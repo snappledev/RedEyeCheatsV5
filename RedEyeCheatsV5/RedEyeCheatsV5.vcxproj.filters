@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="RedEyeCheats CSGO">
+      <UniqueIdentifier>{f1d24729-aeba-4941-b100-b2411453f04c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features">
+      <UniqueIdentifier>{36a88bc6-8924-4f18-9987-a1851852ccfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP">
+      <UniqueIdentifier>{278b28cf-e439-4fa5-b462-bceb60127eab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Damage">
+      <UniqueIdentifier>{eb47e08f-73a7-4f4d-8faa-9855c857fe49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Death Marker">
+      <UniqueIdentifier>{33e85c09-fbd4-42bf-8db3-65b90aed1126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Hitmarker">
+      <UniqueIdentifier>{9a7c09aa-ed35-40f0-8e69-49fce00b3767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Spectator List">
+      <UniqueIdentifier>{062de8a6-70e3-40c4-b8df-c5ac77cd4474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Chams">
+      <UniqueIdentifier>{c563d116-bc88-41b9-b2d2-ad7cbc555449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Radar">
+      <UniqueIdentifier>{74353312-b21a-47ad-9e4d-75b3edb212f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\WhoCanSee">
+      <UniqueIdentifier>{013acad9-da7f-4e18-b0a7-bc8e57489c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\AIMBOT">
+      <UniqueIdentifier>{856b81ea-7b59-4def-bda6-38826c424eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\AIMBOT\RAge">
+      <UniqueIdentifier>{66e6a6a4-7ed1-4534-a762-046d778d0569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\MISC">
+      <UniqueIdentifier>{866347b8-e3b0-4e27-8106-dbfd9e5b3ba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\MISC\Nightmode">
+      <UniqueIdentifier>{da28be35-80df-4993-8fb1-9f0dceb1427e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\SKINCHANGER">
+      <UniqueIdentifier>{af4f337c-a11b-4523-94a1-2db011303c45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\TRIGGERBOT">
+      <UniqueIdentifier>{2ce990b5-0732-41c6-860c-bd94888fe0b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework">
+      <UniqueIdentifier>{31d06f93-a855-4b97-91cf-0684fc801760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\User Interface">
+      <UniqueIdentifier>{23ab8115-1b78-4c1b-a585-8d745da6de27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Procedure">
+      <UniqueIdentifier>{8d522d77-a971-4bee-9409-d94311da9896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Procedure\Game">
+      <UniqueIdentifier>{99f6265a-26e4-4edb-8cc7-9b27aa0adb27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Procedure\Game\Interfaces">
+      <UniqueIdentifier>{ff1b3ed6-f36f-4c49-a7c6-98755094743e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Procedure\Network">
+      <UniqueIdentifier>{5a493cc3-0af5-40b1-b9c8-1009ce775a36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Functions">
+      <UniqueIdentifier>{d28ba435-90e5-45f4-9ccc-35f5990864e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Functions\Log">
+      <UniqueIdentifier>{e1bf2a5a-f01a-4044-be53-1b064a82b7f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Functions\Input">
+      <UniqueIdentifier>{91773ae2-2327-4685-8e21-ea76651ac29d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Painting">
+      <UniqueIdentifier>{8f769cf8-f902-4912-bc2f-24d5e8a46643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Painting\icons">
+      <UniqueIdentifier>{913087c2-295b-4e09-a914-4512cef0f3f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Debug">
+      <UniqueIdentifier>{0bafd09b-4dcb-4548-96b9-ec54a9269c42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Game Classes">
+      <UniqueIdentifier>{6ac6767e-13c6-458e-82e3-300b860142a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Game Classes\Entities">
+      <UniqueIdentifier>{91ad3b4f-f8f8-4c72-bca8-ddf27612ec27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\MISC\View Modifier">
+      <UniqueIdentifier>{16940d53-be4a-469d-8344-322160ee0b3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Game Classes\HTTP">
+      <UniqueIdentifier>{a10cc1b5-666c-4597-8882-308f1df89ce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Debug\RedEyeNetwork">
+      <UniqueIdentifier>{c3b3f1bd-1c49-4d70-b1a0-7ec9fb8be318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Glow">
+      <UniqueIdentifier>{55558dde-64cb-45b2-a033-85b2555e2ebd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\MISC\REC Statistics">
+      <UniqueIdentifier>{82e1d296-a9e3-4c70-a3c8-b36d09b9a61d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\ESP\Grenade Helper">
+      <UniqueIdentifier>{4bf7329a-2066-45e4-a8e8-7c976b92e7ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Procedure\Game\Hooks">
+      <UniqueIdentifier>{33184a46-3dc7-4ddd-88ed-972c690a59a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Framework\Procedure\dllMain">
+      <UniqueIdentifier>{72905a0e-19e6-4851-852b-98452f688a7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedEyeCheats CSGO\Features\SKINCHANGER\Inventory Changer">
+      <UniqueIdentifier>{91cebf8a-9c15-467c-9c0d-226d263a0c80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>RedEyeCheats CSGO\Framework\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="iBaseClient.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientClass.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="recv.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="recvcommon.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="virtualFunction.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="clientState.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="qAngle.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="networkedVariables.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="interfaces.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="iAppSystem.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="xor.h">
+      <Filter>RedEyeCheats CSGO\Framework\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="entityList.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="iEngine.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix3x4.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="iSurface.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2d.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="painting.h">
+      <Filter>RedEyeCheats CSGO\Framework\Painting</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="hookClass.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="addr.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="edgeAim.h">
+      <Filter>RedEyeCheats CSGO\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="inputManager.h">
+      <Filter>RedEyeCheats CSGO\Framework\Functions\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseEntity.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBasePlayer.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cCSPlayer.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseCombatCharacter.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlantedC4.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseViewModel.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseAttributableItem.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseCSGrenade.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseCombatWeapon.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="esp.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="variables.h">
+      <Filter>RedEyeCheats CSGO\Framework\User Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="classes.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="iEngineTrace.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="IVModelInfo.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot.h">
+      <Filter>RedEyeCheats CSGO\Features\AIMBOT</Filter>
+    </ClInclude>
+    <ClInclude Include="cUserCmd.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="crc.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="iClientMode.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="iPanel.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc.h">
+      <Filter>RedEyeCheats CSGO\Features\MISC</Filter>
+    </ClInclude>
+    <ClInclude Include="Nightmode.h">
+      <Filter>RedEyeCheats CSGO\Features\MISC\Nightmode</Filter>
+    </ClInclude>
+    <ClInclude Include="IMatRenderContext.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseAutoPtr.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="convars.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="iconvar.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdkcolor.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientFrameStage.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="skinchanger.h">
+      <Filter>RedEyeCheats CSGO\Features\SKINCHANGER</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkStringTableContiner.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="CEconItemView.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="cBaseWorldModel.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientNetworkable.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="localize.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="conv.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="utilvector.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="utilmemory.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="utilstring.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="spectatorlist.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Spectator List</Filter>
+    </ClInclude>
+    <ClInclude Include="deathmarkers.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Death Marker</Filter>
+    </ClInclude>
+    <ClInclude Include="gameEvent.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="damage.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="CCSBomb.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Chams.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Chams</Filter>
+    </ClInclude>
+    <ClInclude Include="Que.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="InputSystem.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonCode_t.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="inputenums.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="recvhook.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="triggerbot.h">
+      <Filter>RedEyeCheats CSGO\Features\TRIGGERBOT</Filter>
+    </ClInclude>
+    <ClInclude Include="debugmanager.h">
+      <Filter>RedEyeCheats CSGO\Framework\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="radar.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Radar</Filter>
+    </ClInclude>
+    <ClInclude Include="crashhandler.h">
+      <Filter>RedEyeCheats CSGO\Framework\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="whocansee.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\WhoCanSee</Filter>
+    </ClInclude>
+    <ClInclude Include="iGameUI.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="rage.h">
+      <Filter>RedEyeCheats CSGO\Features\AIMBOT\RAge</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientRenderable.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientEntity.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientUnknown.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="viewmodifier.h">
+      <Filter>RedEyeCheats CSGO\Features\MISC\View Modifier</Filter>
+    </ClInclude>
+    <ClInclude Include="steamhttp.h">
+      <Filter>RedEyeCheats CSGO\Game Classes\HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="redeyenetwork.h">
+      <Filter>RedEyeCheats CSGO\Framework\Debug\RedEyeNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="glow.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Glow</Filter>
+    </ClInclude>
+    <ClInclude Include="glowsystem.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="edgeGui.h">
+      <Filter>RedEyeCheats CSGO\Framework\User Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="RECStatistics.h">
+      <Filter>RedEyeCheats CSGO\Features\MISC\REC Statistics</Filter>
+    </ClInclude>
+    <ClInclude Include="Asus.h">
+      <Filter>RedEyeCheats CSGO\Features\MISC\Nightmode</Filter>
+    </ClInclude>
+    <ClInclude Include="grenadehelper.h">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Grenade Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="IEffect.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>RedEyeCheats CSGO\Framework\Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugOverlay.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="ReflectiveDLLInjection.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\dllMain</Filter>
+    </ClInclude>
+    <ClInclude Include="ReflectiveLoader.h">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\dllMain</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlayerInventory.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="cEconItem,h.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="cSharedObjectTypeCache.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="cInventoryManager.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="InventoryChanger.h">
+      <Filter>RedEyeCheats CSGO\Features\SKINCHANGER\Inventory Changer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="networekdVariables.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="interfaces.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="hookClass.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="edgeAim.cpp">
+      <Filter>RedEyeCheats CSGO\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="inputManager.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Functions\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="variables.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\User Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="esp.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP</Filter>
+    </ClCompile>
+    <ClCompile Include="cBaseEntity.cpp">
+      <Filter>RedEyeCheats CSGO\Game Classes\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>RedEyeCheats CSGO\Features\AIMBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="crc.cpp">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="painting.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Painting</Filter>
+    </ClCompile>
+    <ClCompile Include="icons.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Painting\icons</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>RedEyeCheats CSGO\Features\MISC</Filter>
+    </ClCompile>
+    <ClCompile Include="Nightmode.cpp">
+      <Filter>RedEyeCheats CSGO\Features\MISC\Nightmode</Filter>
+    </ClCompile>
+    <ClCompile Include="IModelRender.h">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="skinchanger.cpp">
+      <Filter>RedEyeCheats CSGO\Features\SKINCHANGER</Filter>
+    </ClCompile>
+    <ClCompile Include="utilstring.cpp">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="spectatorlist.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Spectator List</Filter>
+    </ClCompile>
+    <ClCompile Include="deathmarkers.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Death Marker</Filter>
+    </ClCompile>
+    <ClCompile Include="damage.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="Chams.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Chams</Filter>
+    </ClCompile>
+    <ClCompile Include="Que.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="edgeGui.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\User Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Functions\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="triggerbot.cpp">
+      <Filter>RedEyeCheats CSGO\Features\TRIGGERBOT</Filter>
+    </ClCompile>
+    <ClCompile Include="debugmanager.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="radar.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Radar</Filter>
+    </ClCompile>
+    <ClCompile Include="crashhandler.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="whocansee.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\WhoCanSee</Filter>
+    </ClCompile>
+    <ClCompile Include="rage.cpp">
+      <Filter>RedEyeCheats CSGO\Features\AIMBOT\RAge</Filter>
+    </ClCompile>
+    <ClCompile Include="viewmodifier.cpp">
+      <Filter>RedEyeCheats CSGO\Features\MISC\View Modifier</Filter>
+    </ClCompile>
+    <ClCompile Include="glow.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Glow</Filter>
+    </ClCompile>
+    <ClCompile Include="Asus.cpp">
+      <Filter>RedEyeCheats CSGO\Features\MISC\Nightmode</Filter>
+    </ClCompile>
+    <ClCompile Include="grenadehelper.cpp">
+      <Filter>RedEyeCheats CSGO\Features\ESP\Grenade Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\dllMain</Filter>
+    </ClCompile>
+    <ClCompile Include="ReflectiveLoader.cpp">
+      <Filter>RedEyeCheats CSGO\Framework\Procedure\dllMain</Filter>
+    </ClCompile>
+    <ClCompile Include="cPlayerInventory.cpp">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="CEconItem.cpp">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="cSharedObjectTypeCache.cpp">
+      <Filter>RedEyeCheats CSGO\Game Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons.h">
+      <Filter>RedEyeCheats CSGO\Framework\Painting\icons</Filter>
+    </None>
+    <None Include="..\..\Eternity Game\Eternity Game\assets\yettle.raw" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+</Project>

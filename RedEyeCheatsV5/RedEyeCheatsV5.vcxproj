@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{DA7BC35A-F052-4873-9E2B-B2118C9B0BAB}</ProjectGuid>
+    <RootNamespace>RedEyeCheatsV5</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>RedEyeCheatsV5</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <TargetName>REDEYECHEATSDEBUG</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <TargetName>REDEYECHEATSV5</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="addr.h" />
+    <ClInclude Include="Aimbot.h" />
+    <ClInclude Include="Asus.h" />
+    <ClInclude Include="ButtonCode_t.h" />
+    <ClInclude Include="cBaseAttributableItem.h" />
+    <ClInclude Include="CBaseAutoPtr.h" />
+    <ClInclude Include="cBaseCombatCharacter.h" />
+    <ClInclude Include="cBaseCombatWeapon.h" />
+    <ClInclude Include="cBaseCSGrenade.h" />
+    <ClInclude Include="cBaseEntity.h" />
+    <ClInclude Include="cBasePlayer.h" />
+    <ClInclude Include="cBaseViewModel.h" />
+    <ClInclude Include="cBaseWorldModel.h" />
+    <ClInclude Include="CCSBomb.h" />
+    <ClInclude Include="cCSPlayer.h" />
+    <ClInclude Include="cEconItem,h.h" />
+    <ClInclude Include="CEconItemView.h" />
+    <ClInclude Include="Chams.h" />
+    <ClInclude Include="cInventoryManager.h" />
+    <ClInclude Include="classes.h" />
+    <ClInclude Include="ClientClass.h" />
+    <ClInclude Include="ClientFrameStage.h" />
+    <ClInclude Include="clientState.h" />
+    <ClInclude Include="color.h" />
+    <ClInclude Include="conv.h" />
+    <ClInclude Include="convars.h" />
+    <ClInclude Include="cPlantedC4.h" />
+    <ClInclude Include="cPlayerInventory.h" />
+    <ClInclude Include="crashhandler.h" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="cSharedObjectTypeCache.h" />
+    <ClInclude Include="CTexture.h" />
+    <ClInclude Include="cUserCmd.h" />
+    <ClInclude Include="damage.h" />
+    <ClInclude Include="deathmarkers.h" />
+    <ClInclude Include="debugmanager.h" />
+    <ClInclude Include="DebugOverlay.h" />
+    <ClInclude Include="edgeAim.h" />
+    <ClInclude Include="edgeGui.h" />
+    <ClInclude Include="entityList.h" />
+    <ClInclude Include="esp.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="gameEvent.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="glow.h" />
+    <ClInclude Include="glowsystem.h" />
+    <ClInclude Include="grenadehelper.h" />
+    <ClInclude Include="hookClass.h" />
+    <ClInclude Include="Hooks.h" />
+    <ClInclude Include="iAppSystem.h" />
+    <ClInclude Include="IClientUnknown.h" />
+    <ClInclude Include="IClientEntity.h" />
+    <ClInclude Include="iClientMode.h" />
+    <ClInclude Include="IClientNetworkable.h" />
+    <ClInclude Include="IClientRenderable.h" />
+    <ClInclude Include="iconvar.h" />
+    <ClInclude Include="IEffect.h" />
+    <ClInclude Include="iEngine.h" />
+    <ClInclude Include="iEngineTrace.h" />
+    <ClInclude Include="iGameUI.h" />
+    <ClInclude Include="IMatRenderContext.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="inputenums.h" />
+    <ClInclude Include="inputManager.h" />
+    <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="interfaces.h" />
+    <ClInclude Include="InventoryChanger.h" />
+    <ClInclude Include="iPanel.h" />
+    <ClInclude Include="iSurface.h" />
+    <ClInclude Include="IVModelInfo.h" />
+    <ClInclude Include="localize.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="matrix3x4.h" />
+    <ClInclude Include="Misc.h" />
+    <ClInclude Include="networkedVariables.h" />
+    <ClInclude Include="NetworkStringTableContiner.h" />
+    <ClInclude Include="Nightmode.h" />
+    <ClInclude Include="painting.h" />
+    <ClInclude Include="platform.h" />
+    <ClInclude Include="qAngle.h" />
+    <ClInclude Include="Que.h" />
+    <ClInclude Include="radar.h" />
+    <ClInclude Include="rage.h" />
+    <ClInclude Include="RECStatistics.h" />
+    <ClInclude Include="recvhook.h" />
+    <ClInclude Include="redeyenetwork.h" />
+    <ClInclude Include="ReflectiveDLLInjection.h" />
+    <ClInclude Include="ReflectiveLoader.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="sdkcolor.h" />
+    <ClInclude Include="skinchanger.h" />
+    <ClInclude Include="spectatorlist.h" />
+    <ClInclude Include="steamhttp.h" />
+    <ClInclude Include="triggerbot.h" />
+    <ClInclude Include="utilmemory.h" />
+    <ClInclude Include="utilstring.h" />
+    <ClInclude Include="utilvector.h" />
+    <ClInclude Include="variables.h" />
+    <ClInclude Include="vector.h" />
+    <ClInclude Include="vector2d.h" />
+    <ClInclude Include="viewmodifier.h" />
+    <ClInclude Include="virtualFunction.h" />
+    <ClInclude Include="iBaseClient.h" />
+    <ClInclude Include="recv.h" />
+    <ClInclude Include="recvcommon.h" />
+    <ClInclude Include="whocansee.h" />
+    <ClInclude Include="xor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Aimbot.cpp" />
+    <ClCompile Include="Asus.cpp" />
+    <ClCompile Include="cBaseEntity.cpp" />
+    <ClCompile Include="CEconItem.cpp" />
+    <ClCompile Include="Chams.cpp" />
+    <ClCompile Include="cPlayerInventory.cpp" />
+    <ClCompile Include="crashhandler.cpp" />
+    <ClCompile Include="crc.cpp" />
+    <ClCompile Include="cSharedObjectTypeCache.cpp" />
+    <ClCompile Include="damage.cpp" />
+    <ClCompile Include="deathmarkers.cpp" />
+    <ClCompile Include="debugmanager.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="edgeAim.cpp" />
+    <ClCompile Include="edgeGui.cpp" />
+    <ClCompile Include="esp.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="glow.cpp" />
+    <ClCompile Include="grenadehelper.cpp" />
+    <ClCompile Include="hookClass.cpp" />
+    <ClCompile Include="Hooks.cpp" />
+    <ClCompile Include="icons.cpp" />
+    <ClCompile Include="IModelRender.h" />
+    <ClCompile Include="inputManager.cpp" />
+    <ClCompile Include="interfaces.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="Misc.cpp" />
+    <ClCompile Include="networekdVariables.cpp" />
+    <ClCompile Include="Nightmode.cpp" />
+    <ClCompile Include="painting.cpp" />
+    <ClCompile Include="Que.cpp" />
+    <ClCompile Include="radar.cpp" />
+    <ClCompile Include="rage.cpp" />
+    <ClCompile Include="ReflectiveLoader.cpp" />
+    <ClCompile Include="skinchanger.cpp" />
+    <ClCompile Include="spectatorlist.cpp" />
+    <ClCompile Include="triggerbot.cpp" />
+    <ClCompile Include="utilstring.cpp" />
+    <ClCompile Include="variables.cpp" />
+    <ClCompile Include="viewmodifier.cpp" />
+    <ClCompile Include="whocansee.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Eternity Game\Eternity Game\assets\yettle.raw" />
+    <None Include="icons.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
