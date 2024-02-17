@@ -2,7 +2,7 @@
 
 RedEyeCheats V5 is a C++ Counter-strike: Global Offensive internal cheat. 
 With the release of CS2 and my departure from cheating, I have decided to release the source-code to all of my projects. 
-This project is OUTDATED and WILL NOT RUN. 
+This project is OUTDATED and WILL NOT RUN. This is for educational purposes only and i do not condone the use of it.
 ## Screenshots
 ![alt text](https://github.com/snappledev/RedEyeCheatsV5/blob/main/Screenshot_28.png?raw=true)
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/XwO5qdFG6VI/0.jpg)](https://www.youtube.com/watch?v=XwO5qdFG6VI)
